@@ -9,7 +9,7 @@ server:
     include-binding-errors: always
   port: 8080
   servlet:
-    context-path: /api/task-manager
+    context-path: /api/vertical-slice
   tomcat:
     uri-encoding: UTF-8
 
