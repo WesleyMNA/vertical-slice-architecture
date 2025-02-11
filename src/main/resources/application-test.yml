@@ -7,20 +7,12 @@ server:
   error:
     include-message: always
     include-binding-errors: always
-  port: 8080
-  servlet:
-    context-path: /api/task-manager
-  tomcat:
-    uri-encoding: UTF-8
 
 spring:
-  application:
-    name: vertical-slice-architecture
-    timezone: ${TIMEZONE:America/Sao_Paulo}
   jmx:
     enabled: true
   jpa:
     open-in-view: true
-    show-sql: ${SHOW_SQL:false}
+    show-sql: true
     hibernate:
       ddl-auto: update
