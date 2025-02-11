@@ -17,11 +17,11 @@ class LoginController {
 
     @PostMapping
     ResponseEntity<LoginResponse> login(
-            @RequestBody
             @Valid
+            @RequestBody
             LoginRequest request
     ) {
-        LoginResponse res = service.login(request);
-        return ResponseEntity.ok(res);
+        LoginResponse response = service.login(request);
+        return ResponseEntity.ok(response);
     }
 }
