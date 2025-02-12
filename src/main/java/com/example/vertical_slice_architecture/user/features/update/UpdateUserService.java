@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+import static com.example.vertical_slice_architecture.user.shared.UserConstants.EMAIL_ALREADY_EXISTS;
+import static com.example.vertical_slice_architecture.user.shared.UserConstants.USER_NOT_FOUND;
+
 @RequiredArgsConstructor
 @Service
 class UpdateUserService {
@@ -18,7 +21,7 @@ class UpdateUserService {
     void update(UUID id, UpdateRequest request) {
         User user = repository
                 .findById(id)
-                .orElseThrow(() -> new NotFoundException("user not found"));
+                .orElseThrow(() -> new NotFoundException(USER_NOT_FOUND));
         validate(id, request);
         user.setName(request.name());
         user.setEmail(request.email());
@@ -33,6 +36,6 @@ class UpdateUserService {
         boolean existsAnotherUserWithEmail = repository.existsByIdNotAndEmail(id, email);
 
         if  (existsAnotherUserWithEmail)
-            throw new ConflictException("email already exists");
+            throw new ConflictException(EMAIL_ALREADY_EXISTS);
     }
 }

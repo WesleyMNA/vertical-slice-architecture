@@ -6,6 +6,8 @@ import com.example.vertical_slice_architecture.user.infrastructure.UserRepositor
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import static com.example.vertical_slice_architecture.user.shared.UserConstants.EMAIL_ALREADY_EXISTS;
+
 @RequiredArgsConstructor
 @Service
 class CreateUserService {
@@ -28,6 +30,6 @@ class CreateUserService {
         boolean emailExists = repository.existsByEmail(email);
 
         if (emailExists)
-            throw new ConflictException("email already exists");
+            throw new ConflictException(EMAIL_ALREADY_EXISTS);
     }
 }

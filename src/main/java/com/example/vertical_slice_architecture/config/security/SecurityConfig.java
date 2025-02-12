@@ -1,6 +1,5 @@
 package com.example.vertical_slice_architecture.config.security;
 
-import com.example.vertical_slice_architecture.user.resources.UserConstants;
 import com.nimbusds.jose.jwk.JWK;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
@@ -35,7 +34,7 @@ class SecurityConfig {
 
     private final String[] permitPostEndpoints = {
             "/v1/login",
-            UserConstants.URI
+            "/v1/users",
     };
 
     @Bean

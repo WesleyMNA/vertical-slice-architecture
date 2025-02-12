@@ -5,7 +5,7 @@ import com.example.vertical_slice_architecture.test_helpers.controllers.PutContr
 import com.example.vertical_slice_architecture.test_helpers.security.WithCustomAuth;
 import com.example.vertical_slice_architecture.user.domain.User;
 import com.example.vertical_slice_architecture.user.infrastructure.UserRepository;
-import com.example.vertical_slice_architecture.user.resources.UserConstants;
+import com.example.vertical_slice_architecture.user.shared.UserConstants;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.AfterEach;
@@ -45,7 +45,7 @@ class UpdateUserControllerTest extends PutControllerHelper<UUID, UpdateRequest> 
 
     @BeforeEach
     void setUp() {
-        userInDb= new User(
+        userInDb = new User(
                 faker.name().name(),
                 faker.internet().emailAddress(),
                 faker.internet().password()

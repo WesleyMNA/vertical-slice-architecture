@@ -4,7 +4,7 @@ import com.example.vertical_slice_architecture.test_helpers.TestcontainersConfig
 import com.example.vertical_slice_architecture.test_helpers.controllers.PostControllerHelper;
 import com.example.vertical_slice_architecture.user.domain.User;
 import com.example.vertical_slice_architecture.user.infrastructure.UserRepository;
-import com.example.vertical_slice_architecture.user.resources.UserConstants;
+import com.example.vertical_slice_architecture.user.shared.UserConstants;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;

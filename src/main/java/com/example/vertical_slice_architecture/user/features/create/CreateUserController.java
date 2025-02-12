@@ -1,6 +1,6 @@
 package com.example.vertical_slice_architecture.user.features.create;
 
-import com.example.vertical_slice_architecture.user.resources.UserConstants;
+import com.example.vertical_slice_architecture.user.shared.UserConstants;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
