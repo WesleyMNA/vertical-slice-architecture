@@ -1,7 +1,5 @@
-package com.example.vertical_slice_architecture.values_match;
+package com.example.vertical_slice_architecture.shared.values_match;
 
-import com.example.vertical_slice_architecture.shared.values_match.ValuesMatch;
-import com.example.vertical_slice_architecture.shared.values_match.ValuesMatchValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
