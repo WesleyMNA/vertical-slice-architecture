@@ -11,7 +11,6 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -31,6 +30,7 @@ import org.springframework.security.web.SecurityFilterChain;
 class SecurityConfig {
 
     private final RsaKeyProperties rsaKeys;
+    private final JwtConverter converter;
 
     private final String[] permitPostEndpoints = {
             "/v1/login",
@@ -47,8 +47,10 @@ class SecurityConfig {
                                 .requestMatchers(HttpMethod.POST, permitPostEndpoints).permitAll()
                                 .anyRequest().authenticated()
                 )
-                .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .oauth2ResourceServer(oauth2 -> oauth2
+                        .jwt(jwtConfigurer -> jwtConfigurer.jwtAuthenticationConverter(converter)))
+                .sessionManagement(session -> session
+                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .build();
     }
 
