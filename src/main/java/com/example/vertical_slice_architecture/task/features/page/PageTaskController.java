@@ -16,12 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 final class PageTaskController {
 
     private final PageTaskService service;
+
     @GetMapping
     ResponseEntity<Page<TaskResponse>> findAll(
-            TaskSpecification spec,
+            TaskParams params,
             Pageable pageable
     ) {
-        Page<TaskResponse> response = service.findAll(spec, pageable);
+        Page<TaskResponse> response = service.findAll(params, pageable);
         return ResponseEntity.ok(response);
     }
 }

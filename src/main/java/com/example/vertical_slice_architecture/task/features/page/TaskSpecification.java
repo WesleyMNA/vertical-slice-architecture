@@ -11,9 +11,10 @@ import org.springframework.data.jpa.domain.Specification;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+import java.util.UUID;
 
 record TaskSpecification(
+        UUID userId,
         String title,
         LocalDate day
 ) implements Specification<Task> {
@@ -27,11 +28,12 @@ record TaskSpecification(
             CriteriaBuilder builder
     ) {
         List<Predicate> predicates = new ArrayList<>();
+        predicates.add(builder.equal(root.get("userId"), userId));
 
-        if (Objects.nonNull(title))
+        if (title != null)
             predicates.add(builder.like(root.get("title"), "%" + title + "%"));
 
-        if (Objects.nonNull(day))
+        if (day != null)
             predicates.add(builder.equal(root.get("day"), day));
 
         return builder.and(predicates.toArray(Predicate[]::new));
