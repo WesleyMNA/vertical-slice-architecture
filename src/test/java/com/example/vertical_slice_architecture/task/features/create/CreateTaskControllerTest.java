@@ -3,6 +3,7 @@ package com.example.vertical_slice_architecture.task.features.create;
 import com.example.vertical_slice_architecture.task.domain.Task;
 import com.example.vertical_slice_architecture.task.infrastructure.TaskRepository;
 import com.example.vertical_slice_architecture.task.shared.TaskConstants;
+import com.example.vertical_slice_architecture.task.shared.dtos.TaskRequest;
 import com.example.vertical_slice_architecture.test_helpers.TestcontainersConfiguration;
 import com.example.vertical_slice_architecture.test_helpers.controllers.PostControllerHelper;
 import com.example.vertical_slice_architecture.test_helpers.security.WithCustomAuth;
@@ -28,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
 @Import(TestcontainersConfiguration.class)
-class CreateTaskControllerTest extends PostControllerHelper<CreateRequest> {
+class CreateTaskControllerTest extends PostControllerHelper<TaskRequest> {
 
     private final TaskRepository repository;
 
@@ -47,7 +48,7 @@ class CreateTaskControllerTest extends PostControllerHelper<CreateRequest> {
     @Test
     void shouldCreateTask()
             throws Exception {
-        var request = new CreateRequest(
+        var request = new TaskRequest(
                 faker.name().title(),
                 faker.leagueOfLegends().quote(),
                 LocalDate.now(),

@@ -1,6 +1,8 @@
 package com.example.vertical_slice_architecture.task.features.create;
 
 import com.example.vertical_slice_architecture.task.shared.TaskConstants;
+import com.example.vertical_slice_architecture.task.shared.dtos.TaskRequest;
+import com.example.vertical_slice_architecture.task.shared.dtos.TaskResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -20,13 +22,13 @@ public class CreateTaskController {
     private final CreateTaskService service;
 
     @PostMapping
-    ResponseEntity<CreateResponse> create(
+    ResponseEntity<TaskResponse> create(
             @Valid
             @RequestBody
-            CreateRequest request,
+            TaskRequest request,
             UriComponentsBuilder builder
     ) {
-        CreateResponse response = service.create(request);
+        TaskResponse response = service.create(request);
         URI uri = builder
                 .pathSegment(TaskConstants.BASE_V1_URI, "/{id}")
                 .buildAndExpand(response.id())

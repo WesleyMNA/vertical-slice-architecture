@@ -1,4 +1,4 @@
-package com.example.vertical_slice_architecture.task.features.create;
+package com.example.vertical_slice_architecture.task.shared.dtos;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Size;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-record CreateRequest(
+public record TaskRequest(
         @NotBlank
         @Size(max = 100)
         String title,

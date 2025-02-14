@@ -1,10 +1,10 @@
-package com.example.vertical_slice_architecture.task.features.create;
+package com.example.vertical_slice_architecture.task.shared.dtos;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.UUID;
 
-record CreateResponse(
+public record TaskResponse(
         UUID id,
         UUID userId,
         String title,

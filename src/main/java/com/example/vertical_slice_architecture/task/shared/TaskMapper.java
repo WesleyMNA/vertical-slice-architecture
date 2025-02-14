@@ -1,14 +1,16 @@
-package com.example.vertical_slice_architecture.task.features.create;
+package com.example.vertical_slice_architecture.task.shared;
 
 import com.example.vertical_slice_architecture.task.domain.Task;
+import com.example.vertical_slice_architecture.task.shared.dtos.TaskRequest;
+import com.example.vertical_slice_architecture.task.shared.dtos.TaskResponse;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
 @Component
-class CreateTaskMapper {
+public class TaskMapper {
 
-    public Task toEntity(CreateRequest request, UUID id) {
+    public Task toEntity(TaskRequest request, UUID id) {
         return new Task(
                 id,
                 request.title(),
@@ -18,8 +20,8 @@ class CreateTaskMapper {
         );
     }
 
-    public CreateResponse toResponse(Task task) {
-        return new CreateResponse(
+    public TaskResponse toResponse(Task task) {
+        return new TaskResponse(
                 task.getId(),
                 task.getUserId(),
                 task.getTitle(),
