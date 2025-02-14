@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/v1/login")
-class LoginController {
+final class LoginController {
 
     private final LoginService service;
 

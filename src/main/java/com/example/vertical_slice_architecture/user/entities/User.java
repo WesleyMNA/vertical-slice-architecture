@@ -1,4 +1,4 @@
-package com.example.vertical_slice_architecture.user.domain;
+package com.example.vertical_slice_architecture.user.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,7 +1,7 @@
 package com.example.vertical_slice_architecture.user.features.login;
 
 import com.example.vertical_slice_architecture.shared.rest.UnauthorizedException;
-import com.example.vertical_slice_architecture.user.domain.User;
+import com.example.vertical_slice_architecture.user.entities.User;
 import com.example.vertical_slice_architecture.user.infrastructure.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;

@@ -1,6 +1,6 @@
 package com.example.vertical_slice_architecture.user.infrastructure;
 
-import com.example.vertical_slice_architecture.user.domain.User;
+import com.example.vertical_slice_architecture.user.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

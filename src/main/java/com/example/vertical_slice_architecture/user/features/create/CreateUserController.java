@@ -15,7 +15,7 @@ import java.net.URI;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(UserConstants.URI)
-class CreateUserController {
+final class CreateUserController {
 
     private final CreateUserService service;
 

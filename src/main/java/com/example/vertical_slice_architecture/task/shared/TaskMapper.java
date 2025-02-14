@@ -1,6 +1,6 @@
 package com.example.vertical_slice_architecture.task.shared;
 
-import com.example.vertical_slice_architecture.task.domain.Task;
+import com.example.vertical_slice_architecture.task.entities.Task;
 import com.example.vertical_slice_architecture.task.shared.dtos.TaskRequest;
 import com.example.vertical_slice_architecture.task.shared.dtos.TaskResponse;
 import org.springframework.stereotype.Component;

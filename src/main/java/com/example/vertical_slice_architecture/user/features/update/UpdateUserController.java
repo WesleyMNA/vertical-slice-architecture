@@ -11,7 +11,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(UserConstants.URI)
-public class UpdateUserController {
+final class UpdateUserController {
 
     private final UpdateUserService service;
 

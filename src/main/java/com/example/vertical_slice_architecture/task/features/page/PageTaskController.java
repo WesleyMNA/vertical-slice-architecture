@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(TaskConstants.BASE_V1_URI)
-public class PageTaskController {
+final class PageTaskController {
 
     private final PageTaskService service;
     @GetMapping

@@ -12,7 +12,7 @@ import java.util.UUID;
 
 @RequiredArgsConstructor
 @Component
-class TokenGenerator {
+final class TokenGenerator {
 
     private final JwtEncoder encoder;
 

@@ -1,6 +1,6 @@
 package com.example.vertical_slice_architecture.task.features.create;
 
-import com.example.vertical_slice_architecture.task.domain.Task;
+import com.example.vertical_slice_architecture.task.entities.Task;
 import com.example.vertical_slice_architecture.task.infrastructure.TaskRepository;
 import com.example.vertical_slice_architecture.task.shared.TaskConstants;
 import com.example.vertical_slice_architecture.task.shared.dtos.TaskRequest;

@@ -2,7 +2,7 @@ package com.example.vertical_slice_architecture.user.features.create;
 
 import com.example.vertical_slice_architecture.test_helpers.TestcontainersConfiguration;
 import com.example.vertical_slice_architecture.test_helpers.controllers.PostControllerHelper;
-import com.example.vertical_slice_architecture.user.domain.User;
+import com.example.vertical_slice_architecture.user.entities.User;
 import com.example.vertical_slice_architecture.user.infrastructure.UserRepository;
 import com.example.vertical_slice_architecture.user.shared.UserConstants;
 import com.fasterxml.jackson.databind.ObjectMapper;

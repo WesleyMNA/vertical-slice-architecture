@@ -1,6 +1,6 @@
 package com.example.vertical_slice_architecture.user.features.create;
 
-import com.example.vertical_slice_architecture.user.domain.User;
+import com.example.vertical_slice_architecture.user.entities.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;

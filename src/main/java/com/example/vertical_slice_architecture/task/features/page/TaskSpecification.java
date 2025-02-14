@@ -1,6 +1,6 @@
 package com.example.vertical_slice_architecture.task.features.page;
 
-import com.example.vertical_slice_architecture.task.domain.Task;
+import com.example.vertical_slice_architecture.task.entities.Task;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Predicate;

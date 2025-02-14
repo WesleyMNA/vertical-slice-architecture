@@ -1,7 +1,7 @@
 package com.example.vertical_slice_architecture.user.features.create;
 
 import com.example.vertical_slice_architecture.shared.rest.ConflictException;
-import com.example.vertical_slice_architecture.user.domain.User;
+import com.example.vertical_slice_architecture.user.entities.User;
 import com.example.vertical_slice_architecture.user.infrastructure.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

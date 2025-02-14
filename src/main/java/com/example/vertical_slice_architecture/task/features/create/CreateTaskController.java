@@ -17,7 +17,7 @@ import java.net.URI;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(TaskConstants.BASE_V1_URI)
-public class CreateTaskController {
+final class CreateTaskController {
 
     private final CreateTaskService service;
 
