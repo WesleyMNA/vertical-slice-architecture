@@ -39,7 +39,7 @@ class UpdateUserControllerTest extends PutControllerHelper<UUID, UpdateRequest> 
             ObjectMapper mapper,
             UserRepository repository
     ) {
-        super(UserConstants.URI.concat("/{id}"), mvc, mapper);
+        super(UserConstants.URI, mvc, mapper);
         this.repository = repository;
     }
 

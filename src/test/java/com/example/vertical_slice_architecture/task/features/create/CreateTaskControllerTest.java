@@ -33,7 +33,6 @@ class CreateTaskControllerTest extends PostControllerHelper<TaskRequest> {
 
     private final TaskRepository repository;
 
-
     @Autowired
     CreateTaskControllerTest(MockMvc mvc, ObjectMapper mapper, TaskRepository repository) {
         super(TaskConstants.BASE_V1_URI, mvc, mapper);

@@ -9,4 +9,5 @@ public class UserConstants {
 
     public static final String USER_NOT_FOUND = "user not found";
     public static final String EMAIL_ALREADY_EXISTS = "email already exists";
+    public static final String USER_DOES_NOT_HAVE_PERMISSION = "user does not have permission";
 }

@@ -9,5 +9,5 @@ import java.lang.annotation.RetentionPolicy;
 @WithSecurityContext(factory = CustomAuthContextFactory.class)
 public @interface WithCustomAuth {
 
-    String id() default "26b6631e-487e-42bf-9912-22dfab79d67e";
+    String id() default CustomAuthConstants.AUTH_STR_ID;
 }

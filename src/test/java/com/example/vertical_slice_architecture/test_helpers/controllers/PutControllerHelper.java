@@ -26,7 +26,7 @@ public class PutControllerHelper<I, R> {
             throws Exception {
         String content = mapper.writeValueAsString(request);
         return mvc
-                .perform(put(uri, id)
+                .perform(put(uri.concat("/{id}"), id)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(content));
     }
