@@ -1,18 +1,15 @@
 package com.example.vertical_slice_architecture.task.features.delete;
 
-import com.example.vertical_slice_architecture.task.shared.TaskConstants;
+import com.example.vertical_slice_architecture.task.shared.TaskV1Controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
 
 @RequiredArgsConstructor
-@RestController
-@RequestMapping(TaskConstants.BASE_V1_URI)
+@TaskV1Controller
 final class DeleteTaskController {
 
     private final DeleteTaskService service;

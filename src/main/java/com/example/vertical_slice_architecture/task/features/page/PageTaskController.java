@@ -1,18 +1,15 @@
 package com.example.vertical_slice_architecture.task.features.page;
 
-import com.example.vertical_slice_architecture.task.shared.TaskConstants;
+import com.example.vertical_slice_architecture.task.shared.TaskV1Controller;
 import com.example.vertical_slice_architecture.task.shared.dtos.TaskResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor
-@RestController
-@RequestMapping(TaskConstants.BASE_V1_URI)
+@TaskV1Controller
 final class PageTaskController {
 
     private final PageTaskService service;
